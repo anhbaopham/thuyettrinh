@@ -1,0 +1,55 @@
+{
+  "name": "thuyettrinh",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "engines": {
+    "node": "22.x"
+  },
+  "scripts": {
+    "dev": "vite",
+    "dev:api": "tsx watch scripts/dev-api.ts",
+    "dev:all": "concurrently -n web,api -c cyan,magenta \"npm run dev\" \"npm run dev:api\"",
+    "build": "tsc -b && vite build",
+    "lint": "oxlint",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@reduxjs/toolkit": "^2.14.0",
+    "cloudinary": "^2.11.0",
+    "firebase": "^13.2.0",
+    "firebase-admin": "^14.5.0",
+    "gsap": "^3.15.1",
+    "konva": "^10.9.1",
+    "lucide-react": "^1.70.0",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "react-konva": "^19.3.2",
+    "react-redux": "^9.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "^24.19.2",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vercel/node": "^30.0.0",
+    "@vitejs/plugin-react": "^6.1.2",
+    "concurrently": "^10.0.7",
+    "dotenv": "^18.0.9",
+    "express": "^5.3.0",
+    "oxlint": "^1.90.0",
+    "tsx": "^4.23.15",
+    "typescript": "~7.0.2",
+    "vite": "^8.3.6"
+  },
+  "overrides": {
+    "@vercel/node": {
+      "path-to-regexp": "6.3.0",
+      "undici": "6.29.1"
+    },
+    "@grpc/grpc-js": "1.14.5",
+    "ajv": "8.18.0",
+    "glob": "14.0.2",
+    "minimatch": "11.0.5"
+  },
+  "packageManager": "npm@11.9.0"
+}
